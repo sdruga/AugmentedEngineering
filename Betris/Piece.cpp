@@ -22,7 +22,7 @@ void Piece::move(int dx, int dy) {
 }
 
 void Piece::rotate() {
-    rotation = (rotation + 1) % 4;
+    rotation = ((rotation + 1) % 4);
     updateBlocks();
 }
 

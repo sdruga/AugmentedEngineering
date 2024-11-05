@@ -12,11 +12,11 @@ int main() {
             ch = _getch();
             if (ch == 27) // ESC key to exit
                 break;
-            if (ch == 'a')
+            if (ch == ('a'))
                 game.movePieceLeft();
-            if (ch == 'd')
+            if (ch == ('d'))
                 game.movePieceRight();
-            if (ch == 's')
+            if (ch == ('s'))
                 game.movePieceDown();
             if (ch == 'w')
                 game.rotatePiece();
