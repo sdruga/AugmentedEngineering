@@ -11,7 +11,7 @@ int main() {
         if (_kbhit()) {
             ch = _getch();
             if (ch == 27) // ESC key to exit
-                break;
+                break;;
             if (ch == ('a'))
                 game.movePieceLeft();
             if (ch == ('d'))
