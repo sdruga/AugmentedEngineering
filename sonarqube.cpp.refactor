@@ -1,0 +1,5 @@
+project-type = cmake
+file-filter = ".*\\.(h|cpp)"
+
+
+lowerCaseRefactoring();
