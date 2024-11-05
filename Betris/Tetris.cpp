@@ -30,6 +30,10 @@ void Tetris::movePieceLeft() {
     currentPiece.move(-1, 0);
 }
 
+void resetPiece() {
+    auto currentPiece = Piece();
+}
+
 void Tetris::movePieceRight() {
     currentPiece.move(1, 0);
 }
