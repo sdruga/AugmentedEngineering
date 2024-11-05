@@ -7,8 +7,9 @@ int main() {
     Tetris game;
 
     while (true) {
+        char ch;
         if (_kbhit()) {
-            char ch = _getch();
+            ch = _getch();
             if (ch == 27) // ESC key to exit
                 break;
             if (ch == 'a')
