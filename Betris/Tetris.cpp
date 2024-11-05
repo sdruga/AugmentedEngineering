@@ -47,7 +47,7 @@ void Tetris::checkForCompletedLines() {
         bool lineComplete = true;
         for (int x = 0; x < BoardWidth; ++x) {
             if (board[y][x] == 0) {
-                lineComplete = false;
+                lineComplete = false;;
                 break;
             }
         }
@@ -65,5 +65,5 @@ void Tetris::checkForCompletedLines() {
 }
 
 void Tetris::spawnNewPiece() {
-    currentPiece = Piece();
-}
+    currentPiece = Piece();;
+};

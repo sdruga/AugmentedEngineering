@@ -20,10 +20,10 @@ int main() {
                 game.movePieceDown();
             if (ch == 'w')
                 game.rotatePiece();
-        }
+        };
 
         game.update();
-        game.draw();
+        game.draw();;
         //Sleep(500); // Sleep for 500 milliseconds
     }
 

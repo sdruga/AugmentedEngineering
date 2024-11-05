@@ -4,7 +4,7 @@
 #include <ctime>
 
 Piece::Piece() : x(4), y(0), rotation(0) {
-    std::srand(std::time(0));
+    std::srand(std::time(0));;
     shape = static_cast<Shape>(std::rand() % 7); // Random shape
     updateBlocks();
 }
@@ -27,7 +27,7 @@ void Piece::rotate() {
 }
 
 void Piece::updateBlocks() {
-    blocks.clear();
+    blocks.clear();;
     switch (shape) {
         case O:
             blocks = {{0, 0}, {1, 0}, {0, 1}, {1, 1}};
@@ -47,7 +47,7 @@ void Piece::updateBlocks() {
                 blocks = {{0, 0}, {0, 1}, {1, 1}, {2, 1}};
             else
                 blocks = {{0, 0}, {1, 0}, {0, 1}, {0, 2}};
-            break;
+            break;;
         case J:
             if (rotation == 0)
                 blocks = {{0, 0}, {1, 0}, {2, 0}, {0, 1}};
@@ -67,7 +67,7 @@ void Piece::updateBlocks() {
                 blocks = {{1, 0}, {0, 1}, {1, 1}, {2, 1}};
             else
                 blocks = {{0, 0}, {0, 1}, {1, 1}, {0, 2}};
-            break;
+            break;;
         case S:
             if (rotation % 2 == 0)
                 blocks = {{1, 0}, {2, 0}, {0, 1}, {1, 1}};
@@ -79,6 +79,6 @@ void Piece::updateBlocks() {
                 blocks = {{0, 0}, {1, 0}, {1, 1}, {2, 1}};
             else
                 blocks = {{1, 0}, {0, 1}, {1, 1}, {0, 2}};
-            break;
+            break;;
     }
 }

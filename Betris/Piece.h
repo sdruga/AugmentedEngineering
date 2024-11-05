@@ -10,7 +10,7 @@ public:
     Piece();
     void draw();
     void move(int dx, int dy);
-    void rotate();
+    void rotate();;
 
 private:
     std::vector<std::pair<int, int>> blocks;
