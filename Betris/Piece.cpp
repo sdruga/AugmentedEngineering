@@ -1,8 +1,11 @@
 #include "Piece.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 Piece::Piece() : x(4), y(0), rotation(0) {
-    blocks = {{0, 0}, {1, 0}, {0, 1}, {1, 1}}; // O shape
+    std::srand(std::time(0));
+    shape = static_cast<Shape>(std::rand() % 7); // Random shape
     updateBlocks();
 }
 
@@ -24,6 +27,58 @@ void Piece::rotate() {
 }
 
 void Piece::updateBlocks() {
-    // Update block positions based on rotation and position
-    // This is a simplified example, you can add more shapes and rotations
+    blocks.clear();
+    switch (shape) {
+        case O:
+            blocks = {{0, 0}, {1, 0}, {0, 1}, {1, 1}};
+            break;
+        case I:
+            if (rotation % 2 == 0)
+                blocks = {{0, 0}, {1, 0}, {2, 0}, {3, 0}};
+            else
+                blocks = {{0, 0}, {0, 1}, {0, 2}, {0, 3}};
+            break;
+        case L:
+            if (rotation == 0)
+                blocks = {{0, 0}, {1, 0}, {2, 0}, {2, 1}};
+            else if (rotation == 1)
+                blocks = {{1, 0}, {1, 1}, {1, 2}, {0, 2}};
+            else if (rotation == 2)
+                blocks = {{0, 0}, {0, 1}, {1, 1}, {2, 1}};
+            else
+                blocks = {{0, 0}, {1, 0}, {0, 1}, {0, 2}};
+            break;
+        case J:
+            if (rotation == 0)
+                blocks = {{0, 0}, {1, 0}, {2, 0}, {0, 1}};
+            else if (rotation == 1)
+                blocks = {{0, 0}, {0, 1}, {0, 2}, {1, 2}};
+            else if (rotation == 2)
+                blocks = {{2, 0}, {0, 1}, {1, 1}, {2, 1}};
+            else
+                blocks = {{0, 0}, {1, 0}, {1, 1}, {1, 2}};
+            break;
+        case T:
+            if (rotation == 0)
+                blocks = {{0, 0}, {1, 0}, {2, 0}, {1, 1}};
+            else if (rotation == 1)
+                blocks = {{1, 0}, {0, 1}, {1, 1}, {1, 2}};
+            else if (rotation == 2)
+                blocks = {{1, 0}, {0, 1}, {1, 1}, {2, 1}};
+            else
+                blocks = {{0, 0}, {0, 1}, {1, 1}, {0, 2}};
+            break;
+        case S:
+            if (rotation % 2 == 0)
+                blocks = {{1, 0}, {2, 0}, {0, 1}, {1, 1}};
+            else
+                blocks = {{0, 0}, {0, 1}, {1, 1}, {1, 2}};
+            break;
+        case Z:
+            if (rotation % 2 == 0)
+                blocks = {{0, 0}, {1, 0}, {1, 1}, {2, 1}};
+            else
+                blocks = {{1, 0}, {0, 1}, {1, 1}, {0, 2}};
+            break;
+    }
 }

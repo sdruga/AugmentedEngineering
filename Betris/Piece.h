@@ -5,6 +5,8 @@
 
 class Piece {
 public:
+    enum Shape { O, I, L, J, T, S, Z };
+
     Piece();
     void draw();
     void move(int dx, int dy);
@@ -14,6 +16,7 @@ private:
     std::vector<std::pair<int, int>> blocks;
     int x, y;
     int rotation;
+    Shape shape;
 
     void updateBlocks();
 };
