@@ -21,7 +21,7 @@ private:
     const int BoardHeight = 20;
 
     void checkForCompletedLines();
-    void spawnNewPiece() {};
+    void spawnNewPiece(); // Only the declaration here
 };
 
 #endif
