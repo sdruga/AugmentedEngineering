@@ -2,7 +2,7 @@
 #include <iostream>
 
 Tetris::Tetris() {
-    board.resize(boardHeight, std::vector<int>(boardWidth, 0));
+    board.resize(BoardHeight, std::vector<int>(BoardWidth, 0));
     spawnNewPiece();
 }
 
@@ -13,8 +13,8 @@ void Tetris::update() {
 
 void Tetris::draw() {
     system("cls"); // Clear the console
-    for (int y = 0; y < boardHeight; ++y) {
-        for (int x = 0; x < boardWidth; ++x) {
+    for (int y = 0; y < BoardHeight; ++y) {
+        for (int x = 0; x < BoardWidth; ++x) {
             if (board[y][x] != 0) {
                 std::cout << "#";
             } else {
@@ -43,9 +43,9 @@ void Tetris::rotatePiece() {
 }
 
 void Tetris::checkForCompletedLines() {
-    for (int y = 0; y < boardHeight; ++y) {
+    for (int y = 0; y < BoardHeight; ++y) {
         bool lineComplete = true;
-        for (int x = 0; x < boardWidth; ++x) {
+        for (int x = 0; x < BoardWidth; ++x) {
             if (board[y][x] == 0) {
                 lineComplete = false;
                 break;
@@ -53,11 +53,11 @@ void Tetris::checkForCompletedLines() {
         }
         if (lineComplete) {
             for (int yy = y; yy > 0; --yy) {
-                for (int xx = 0; xx < boardWidth; ++xx) {
+                for (int xx = 0; xx < BoardWidth; ++xx) {
                     board[yy][xx] = board[yy - 1][xx];
                 }
             }
-            for (int xx = 0; xx < boardWidth; ++xx) {
+            for (int xx = 0; xx < BoardWidth; ++xx) {
                 board[0][xx] = 0;
             }
         }

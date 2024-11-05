@@ -17,8 +17,8 @@ public:
 private:
     Piece currentPiece;
     std::vector<std::vector<int>> board;
-    const int boardWidth = 10;
-    const int boardHeight = 20;
+    const int BoardWidth = 10;
+    const int BoardHeight = 20;
 
     void checkForCompletedLines();
     void spawnNewPiece();
