@@ -1,5 +1,2 @@
 project-type = cmake
-file-filter = ".*\\.(h|cpp)"
-
-
-removeUnnecessaryBrackets();
+file-filter = ""
