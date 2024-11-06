@@ -14,7 +14,7 @@ int main() {
                 break;;
             if (ch == ('a'))
                 game.movePieceLeft();
-            if (ch == ('d'))
+            if (ch == 'd')
                 game.movePieceRight();
             if (ch == ('s'))
                 game.movePieceDown();
