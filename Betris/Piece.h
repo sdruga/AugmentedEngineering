@@ -11,6 +11,7 @@ public:
     void draw();
     void move(int dx, int dy);
     void rotate();;
+    void log();
 
 private:
     std::vector<std::pair<int, int>> blocks;

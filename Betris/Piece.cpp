@@ -19,6 +19,7 @@ void Piece::move(int dx, int dy) {
     x += dx;
     y += dy;
     updateBlocks();
+
 }
 
 void Piece::rotate() {
@@ -49,7 +50,7 @@ void Piece::updateBlocks() {
                 blocks = {{0, 0}, {1, 0}, {0, 1}, {0, 2}};
             break;;
         case J:
-            if (rotation == 0)
+            if (rotation == 0) 
                 blocks = {{0, 0}, {1, 0}, {2, 0}, {0, 1}};
             else if (rotation == 1)
                 blocks = {{0, 0}, {0, 1}, {0, 2}, {1, 2}};
@@ -81,4 +82,8 @@ void Piece::updateBlocks() {
                 blocks = {{1, 0}, {0, 1}, {1, 1}, {0, 2}};
             break;;
     }
+}
+
+void Piece::log() {
+    std::cout << "Block is ... \n";
 }
