@@ -5,8 +5,10 @@
 
 int main() {
     Tetris game;
+    int score = 0;
 
     while (true) {
+        auto log = "Score is ...";
         char ch;
         if (_kbhit()) {
             ch = _getch();
