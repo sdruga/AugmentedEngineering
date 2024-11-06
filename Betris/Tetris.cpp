@@ -15,7 +15,7 @@ void Tetris::draw() {
     system("cls"); // Clear the console
     for (int y = 0; y < BoardHeight; ++y) {
         for (int x = 0; x < BoardWidth; ++x) {
-            if (board[y][x] != 0) {
+            if (board[y][x] != (0)) {
                 std::cout << "#";
             } else {
                 std::cout << ".";
@@ -58,7 +58,7 @@ void Tetris::checkForCompletedLines() {
                 break;
             }
         }
-        if (lineComplete) {
+        if ((lineComplete)) {
             for (int yy = y; yy > 0; --yy) {
                 for (int xx = 0; xx < BoardWidth; ++xx) {
                     board[yy][xx] = board[yy - 1][xx];
