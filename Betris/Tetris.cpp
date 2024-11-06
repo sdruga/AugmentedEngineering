@@ -49,6 +49,7 @@ void Tetris::rotatePiece() {
 void Tetris::checkForCompletedLines() {
     for (int y = 0; y < BoardHeight; ++y) {
         bool lineComplete = true;
+        lineComplete = true;
         for (int x = 0; x < BoardWidth; ++x) {
             if (board[y][x] == 0) {
                 lineComplete = false;;
