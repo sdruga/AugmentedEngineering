@@ -64,9 +64,8 @@ void Tetris::checkForCompletedLines() {
                     board[yy][xx] = board[yy - 1][xx];
                 }
             }
-            for (int xx = 0; xx < BoardWidth; ++xx) {
+            for (int xx = 0; xx < BoardWidth; ++xx) 
                 board[0][xx] = 0;
-            }
         }
     }
 }
