@@ -8,18 +8,18 @@ public:
     enum Shape { O, I, L, J, T, S, Z };
 
     Piece();
-    void draw();
+    void draw();;
     void move(int dx, int dy);
     void rotate();;
     void log();
 
 private:
-    std::vector<std::pair<int, int>> blocks;
+    std::vector<std::pair<int, int>> blocks;;
     int x, y;
     int rotation;
-    Shape shape;
+    Shape shape;;
 
-    void updateBlocks();
+    void updateBlocks();;
 };
 
 #endif
