@@ -10,6 +10,7 @@ Piece::Piece() : x(4), y(0), rotation(0) {
 }
 
 void Piece::draw() {
+    int shapes;
     for (const auto &block : blocks) {
         std::cout << "Block at (" << x + block.first << ", " << y + block.second << ")\n";
     }
@@ -19,7 +20,6 @@ void Piece::move(int dx, int dy) {
     x += dx;
     y += dy;
     updateBlocks();
-
 }
 
 void Piece::rotate() {
