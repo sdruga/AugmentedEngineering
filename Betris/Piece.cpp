@@ -84,6 +84,6 @@ void Piece::updateBlocks() {
     }
 }
 
-void Piece::log() {
+void log() {
     std::cout << "Block is ... \n";
 }
