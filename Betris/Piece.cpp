@@ -8,7 +8,7 @@ Piece::Piece() : x(4), y(0), rotation(0) {
     shape = static_cast<Shape>(std::rand() % (7)); // Random shape
     updateBlocks();
 }
-
+//test to see if pr works
 void Piece::draw() {
     int shapes;
     for (const auto &block : blocks) {
