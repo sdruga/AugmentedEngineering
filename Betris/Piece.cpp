@@ -15,7 +15,7 @@ void Piece::draw() {
         std::cout << "Block at (" << x + block.first << ", " << y + block.second << ")\n";
     }
 }
-
+//sasa
 void Piece::move(int dx, int dy) {
     x += dx;
     y += dy;
