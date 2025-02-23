@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
+//sasas
 Piece::Piece() : x(4), y(0), rotation(0) {
     std::srand(std::time(0));;
     shape = static_cast<Shape>(std::rand() % (7)); // Random shape
